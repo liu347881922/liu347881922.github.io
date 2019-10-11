@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC] lucene &amp;amp; solrlucene的思维导图 搜索引擎原理图 倒排索引介绍 倒排索引, 又称为反向索引: 以字或者词,甚至是一句话一段话作为一个关键字进行索引, 每一个关键字都会对应着一个记录项, 记录项中记录了这个关键字出现在那些文档中, 已经在此文档的什么位置上 为什么说倒排索引可以提升查询的效率和精准度呢? 倒排索引, 是将数据提前按照格式分词放好,建立索引, 当用户">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/09/06/lucene & solr/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] lucene &amp;amp; solrlucene的思维导图 搜索引擎原理图 倒排索引介绍 倒排索引, 又称为反向索引: 以字或者词,甚至是一句话一段话作为一个关键字进行索引, 每一个关键字都会对应着一个记录项, 记录项中记录了这个关键字出现在那些文档中, 已经在此文档的什么位置上 为什么说倒排索引可以提升查询的效率和精准度呢? 倒排索引, 是将数据提前按照格式分词放好,建立索引, 当用户">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene.png">
+<meta property="og:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene1.png">
+<meta property="og:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene2.png">
+<meta property="og:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene3.png">
+<meta property="og:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene4.png">
+<meta property="og:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Csolr1.png">
+<meta property="og:updated_time" content="2019-08-19T00:46:19.763Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="[TOC] lucene &amp;amp; solrlucene的思维导图 搜索引擎原理图 倒排索引介绍 倒排索引, 又称为反向索引: 以字或者词,甚至是一句话一段话作为一个关键字进行索引, 每一个关键字都会对应着一个记录项, 记录项中记录了这个关键字出现在那些文档中, 已经在此文档的什么位置上 为什么说倒排索引可以提升查询的效率和精准度呢? 倒排索引, 是将数据提前按照格式分词放好,建立索引, 当用户">
+<meta name="twitter:image" content="e:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-lucene &amp; solr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/06/lucene & solr/" class="article-date">
+  <time datetime="2019-09-06T13:18:49.542Z" itemprop="datePublished">2019-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h2 id="lucene-amp-solr"><a href="#lucene-amp-solr" class="headerlink" title="lucene &amp; solr"></a>lucene &amp; solr</h2><h3 id="lucene的思维导图"><a href="#lucene的思维导图" class="headerlink" title="lucene的思维导图"></a>lucene的思维导图</h3><p><img src="E:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene.png" alt="lucene的思维导图"></p>
+<h3 id="搜索引擎原理图"><a href="#搜索引擎原理图" class="headerlink" title="搜索引擎原理图"></a>搜索引擎原理图</h3><p><img src="E:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene1.png" alt="搜索引擎原理图"></p>
+<h3 id="倒排索引"><a href="#倒排索引" class="headerlink" title="倒排索引"></a>倒排索引</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
+<p>倒排索引, 又称为反向索引: 以字或者词,甚至是一句话一段话作为一个关键字进行索引, 每一个关键字都会对应着一个记录项, 记录项中记录了这个关键字出现在那些文档中, 已经在此文档的什么位置上</p>
+<p>为什么说倒排索引可以提升查询的效率和精准度呢?</p>
+<p>倒排索引, 是将数据提前按照格式分词放好,建立索引, 当用户进行搜索, 将用户的关键字进行分词, 然后根据分词后的单词到索引库中寻找对应词条,根据词条, 查到对应所在的文档位置, 将其文档内容直接获取即可</p>
+</blockquote>
+<h4 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h4><p><img src="E:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene2.png" alt></p>
+<h3 id="lucene"><a href="#lucene" class="headerlink" title="lucene"></a>lucene</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
+<p>Lucene是Apache提供的一个开源的全文检索引擎工具包, 其本质就是一个工具包, 而非一个完整的搜索引擎, 但是我们可以通过Lucene来构建一个搜索引擎</p>
+</blockquote>
+<h4 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h4><p><img src="E:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene3.png" alt></p>
+<h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><blockquote>
+<ul>
+<li><p>IndexWriter: 索引写入器对象，其主要的作用, 添加索引, 修改索引和删除索引，创建此对象的时候, 需要传入Directory和indexWriterConfig对象</p>
+</li>
+<li><p>Directory: 目录类, 用来指定索引库的目录</p>
+<ul>
+<li><p>常用的实现类:</p>
+<blockquote>
+<ul>
+<li>FSDirectory: 用来指定文件系统的目录, 将索引信息保存到磁盘上<br>优点: 索引可以进行长期保存, 安全系数高<br>缺点: 读取略慢</li>
+<li>RAMDriectory: 内存目录, 将索引库信息存放到内存中<br>优点: 读取速度快<br>缺点: 不安全, 无法长期保存, 关机后就消失了</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>IndexWriterConfig: 索引写入器的配置类</p>
+</li>
+<li><p>Document: 文档</p>
+<p>在Lucene中, 每一条数据以文档的形式进行存储, 文档中也有其对应的属性和值, Lucene中一个文档类似数据库的一个表, 表中的字段类似于文档中的字段,只不过这个文档只能保存一条数据<br>Document看做是一个文件, 文件的属性就是文档的属性, 文件对应属性的值就是文档的属性的值 content,一个文档中可以有多个字段, 每一个字段就是一个field对象,不同的文档可以有不同的属性，字段也有其对应数据类型, 故Field类也提供了各种数据类型的实现类</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="E:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Clucene4.png" alt></p>
+<h3 id="solr"><a href="#solr" class="headerlink" title="solr"></a>solr</h3><h4 id="什么是solr？"><a href="#什么是solr？" class="headerlink" title="什么是solr？"></a>什么是solr？</h4><p>​    Solr 是 Apache 下的一个顶级开源项目，采用 Java 开发，它是基于 Lucene 的全文搜索 </p>
+<p>服务器。Solr 提供了比 Lucene 更为丰富的查询语言，同时实现了可配置、可扩展，并对索 </p>
+<p>引、搜索性能进行了优化。 </p>
+<p>Solr 可以独立运行，运行在 Jetty、Tomcat 等这些 Servlet 容器中，Solr 索引的实现方法 </p>
+<p>很简单，用 POST 方法向 Solr 服务器发送一个描述 Field 及其内容的 XML 文档，Solr 根 </p>
+<p>据 xml 文档添加、删除、更新索引 。Solr 搜索只需要发送 HTTP GET 请求，然后对 Solr 返 </p>
+<p>回 Xml、json 等格式的查询结果进行解析，组织页面布局。Solr 不提供构建 UI 的功能，Solr </p>
+<p>提供了一个管理界面，通过管理界面可以查询 Solr 的配置和运行情况。</p>
+<h4 id="Solr-与-Lucene-的区别"><a href="#Solr-与-Lucene-的区别" class="headerlink" title="Solr 与 Lucene 的区别"></a><strong>Solr</strong> <strong>与</strong> <strong>Lucene</strong> <strong>的区别</strong></h4><p>​    Lucene 是一个开放源代码的全文检索引擎工具包，它不是一个完整的全文检索引擎， </p>
+<p>Lucene 提供了完整的查询引擎和索引引擎，目的是为软件开发人员提供一个简单易用的工 </p>
+<p>具包，以方便的在目标系统中实现全文检索的功能，或者以 Lucene 为基础构建全文检索引</p>
+<p>擎。</p>
+<p>​    Solr 的目标是打造一款企业级的搜索引擎系统，它是一个搜索引擎服务，可以独立运 </p>
+<p>行，通过 Solr 可以非常快速的构建企业的搜索引擎，通过 Solr 也可以高效的完成站内搜索 </p>
+<p>功 能 。 </p>
+<p><img src="E:%5C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5Cimg%5Csolr1.png" alt></p>
+<h4 id="solr整合tomcat"><a href="#solr整合tomcat" class="headerlink" title="solr整合tomcat"></a>solr整合tomcat</h4><p><a href="https://blog.csdn.net/yunheli6451/article/details/82817064" target="_blank" rel="noopener">https://blog.csdn.net/yunheli6451/article/details/82817064</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/06/lucene & solr/" data-id="ck1lfg2fd0001p11xljqcfi2m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/06/shiro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/06/Spring Boot/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/06/shiro/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/06/lucene & solr/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
