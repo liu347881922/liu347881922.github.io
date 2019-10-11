@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>shiro笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="shiro权限管理原理1.什么是权限管理？​        只要有用户参与的系统一般都要有权限管理，权限管理实现对用户访问系统的控制，按照安全规则或者安全策略控制用户可以访问而且只能访问自己被授权的资源。 权限管理包括用户认证和授权两部分。 2. 2.用户认证 认证的概念  用户认证，用户去访问系统，系统要验证用户身份的合法性。最常用的用户身份验证的  方法：1、用户名密码方式、2、指纹打卡机、3">
+  <meta name="description" content="shiro权限管理原理1.什么是权限管理？​        只要有用户参与的系统一般都要有权限管理，权限管理实现对用户访问系统的控制，按照安全规则或者安全策略控制用户可以访问而且只能访问自己被授权的资源。 权限管理包括用户认证和授权两部分。​">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/09/06/shiro/index.html">
+<meta property="og:title" content="shiro笔记">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/shiro/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="shiro权限管理原理1.什么是权限管理？​        只要有用户参与的系统一般都要有权限管理，权限管理实现对用户访问系统的控制，按照安全规则或者安全策略控制用户可以访问而且只能访问自己被授权的资源。 权限管理包括用户认证和授权两部分。 2. 2.用户认证 认证的概念  用户认证，用户去访问系统，系统要验证用户身份的合法性。最常用的用户身份验证的  方法：1、用户名密码方式、2、指纹打卡机、3">
+<meta property="og:description" content="shiro权限管理原理1.什么是权限管理？​        只要有用户参与的系统一般都要有权限管理，权限管理实现对用户访问系统的控制，按照安全规则或者安全策略控制用户可以访问而且只能访问自己被授权的资源。 权限管理包括用户认证和授权两部分。​">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/shiro1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/shiro2.png">
@@ -21,10 +21,10 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/shiro4.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/shiro5.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/shiro6.png">
-<meta property="og:updated_time" content="2019-10-11T02:16:20.954Z">
+<meta property="og:updated_time" content="2019-10-11T02:56:35.644Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="shiro权限管理原理1.什么是权限管理？​        只要有用户参与的系统一般都要有权限管理，权限管理实现对用户访问系统的控制，按照安全规则或者安全策略控制用户可以访问而且只能访问自己被授权的资源。 权限管理包括用户认证和授权两部分。 2. 2.用户认证 认证的概念  用户认证，用户去访问系统，系统要验证用户身份的合法性。最常用的用户身份验证的  方法：1、用户名密码方式、2、指纹打卡机、3">
+<meta name="twitter:title" content="shiro笔记">
+<meta name="twitter:description" content="shiro权限管理原理1.什么是权限管理？​        只要有用户参与的系统一般都要有权限管理，权限管理实现对用户访问系统的控制，按照安全规则或者安全策略控制用户可以访问而且只能访问自己被授权的资源。 权限管理包括用户认证和授权两部分。​">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/liu347881922/images/master/shiro1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -164,9 +164,24 @@
             <article id="post-shiro" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      shiro笔记
+    </h1>
+  
+
+        
+        <a href="/2019/10/11/shiro/" class="archive-article-date">
+  	<time datetime="2019-10-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="shiro"><a href="#shiro" class="headerlink" title="shiro"></a>shiro</h2><h3 id="权限管理原理"><a href="#权限管理原理" class="headerlink" title="权限管理原理"></a>权限管理原理</h3><h4 id="1-什么是权限管理？"><a href="#1-什么是权限管理？" class="headerlink" title="1.什么是权限管理？"></a>1.什么是权限管理？</h4><p>​        只要有用户参与的系统一般都要有权限管理，权限管理实现对<strong>用户访问系统的控制</strong>，按照<strong>安全规则</strong>或者<strong>安全策略</strong>控制用户可以访问而且只能访问自己<strong>被授权的资源</strong>。 权限管理包括<strong><em>用户认证</em></strong>和<strong><em>授权</em></strong>两部分。 2.</p>
+        <h2 id="shiro"><a href="#shiro" class="headerlink" title="shiro"></a>shiro</h2><h3 id="权限管理原理"><a href="#权限管理原理" class="headerlink" title="权限管理原理"></a>权限管理原理</h3><h4 id="1-什么是权限管理？"><a href="#1-什么是权限管理？" class="headerlink" title="1.什么是权限管理？"></a>1.什么是权限管理？</h4><p>​        只要有用户参与的系统一般都要有权限管理，权限管理实现对<strong>用户访问系统的控制</strong>，按照<strong>安全规则</strong>或者<strong>安全策略</strong>控制用户可以访问而且只能访问自己<strong>被授权的资源</strong>。 权限管理包括<strong><em>用户认证</em></strong>和<strong><em>授权</em></strong>两部分。<br>​      <a id="more"></a></p>
 <h4 id="2-用户认证"><a href="#2-用户认证" class="headerlink" title="2.用户认证"></a>2.<strong>用户认证</strong></h4><ul>
 <li><p><strong>认证的概念</strong></p>
 <blockquote>
@@ -389,7 +404,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/06/shiro/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/shiro/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -403,20 +418,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/06/Spring Boot/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/11/angularjs/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          angularjs笔记
         
       </div>
     </a>
   
-  
-    <a href="/2019/09/06/lucene & solr/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 

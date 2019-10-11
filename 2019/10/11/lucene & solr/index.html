@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/9 | Hexo</title>
+  <title>lucene &amp; solr笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/09/index.html">
+  <meta name="description" content="lucene &amp;amp; solrlucene的思维导图 搜索引擎原理图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lucene &amp; solr笔记">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/lucene & solr/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="lucene &amp;amp; solrlucene的思维导图 搜索引擎原理图">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/lucene.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/lucene1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/lucene2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/lucene3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/lucene4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/liu347881922/images/master/solr1.png">
+<meta property="og:updated_time" content="2019-10-11T02:56:42.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="lucene &amp; solr笔记">
+<meta name="twitter:description" content="lucene &amp;amp; solrlucene的思维导图 搜索引擎原理图">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/liu347881922/images/master/lucene.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,85 +161,219 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-lucene &amp; solr" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      lucene &amp; solr笔记
+    </h1>
+  
+
+        
+        <a href="/2019/10/11/lucene & solr/" class="archive-article-date">
+  	<time datetime="2019-10-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="lucene-amp-solr"><a href="#lucene-amp-solr" class="headerlink" title="lucene &amp; solr"></a>lucene &amp; solr</h2><h3 id="lucene的思维导图"><a href="#lucene的思维导图" class="headerlink" title="lucene的思维导图"></a>lucene的思维导图</h3><p><img src="https://raw.githubusercontent.com/liu347881922/images/master/lucene.png" alt="lucene"></p>
+<h3 id="搜索引擎原理图"><a href="#搜索引擎原理图" class="headerlink" title="搜索引擎原理图"></a>搜索引擎原理图</h3><p><img src="https://raw.githubusercontent.com/liu347881922/images/master/lucene1.png" alt="lucene1"></p>
+<a id="more"></a>
+
+<h3 id="倒排索引"><a href="#倒排索引" class="headerlink" title="倒排索引"></a>倒排索引</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
+<p>倒排索引, 又称为反向索引: 以字或者词,甚至是一句话一段话作为一个关键字进行索引, 每一个关键字都会对应着一个记录项, 记录项中记录了这个关键字出现在那些文档中, 已经在此文档的什么位置上</p>
+<p>为什么说倒排索引可以提升查询的效率和精准度呢?</p>
+<p>倒排索引, 是将数据提前按照格式分词放好,建立索引, 当用户进行搜索, 将用户的关键字进行分词, 然后根据分词后的单词到索引库中寻找对应词条,根据词条, 查到对应所在的文档位置, 将其文档内容直接获取即可</p>
+</blockquote>
+<h4 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h4><p><img src="https://raw.githubusercontent.com/liu347881922/images/master/lucene2.png" alt="lucene2"></p>
+<h3 id="lucene"><a href="#lucene" class="headerlink" title="lucene"></a>lucene</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
+<p>Lucene是Apache提供的一个开源的全文检索引擎工具包, 其本质就是一个工具包, 而非一个完整的搜索引擎, 但是我们可以通过Lucene来构建一个搜索引擎</p>
+</blockquote>
+<h4 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h4><p><img src="https://raw.githubusercontent.com/liu347881922/images/master/lucene3.png" alt="lucene3"></p>
+<h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><blockquote>
+<ul>
+<li><p>IndexWriter: 索引写入器对象，其主要的作用, 添加索引, 修改索引和删除索引，创建此对象的时候, 需要传入Directory和indexWriterConfig对象</p>
+</li>
+<li><p>Directory: 目录类, 用来指定索引库的目录</p>
+<ul>
+<li><p>常用的实现类:</p>
+<blockquote>
+<ul>
+<li>FSDirectory: 用来指定文件系统的目录, 将索引信息保存到磁盘上<br>优点: 索引可以进行长期保存, 安全系数高<br>缺点: 读取略慢</li>
+<li>RAMDriectory: 内存目录, 将索引库信息存放到内存中<br>优点: 读取速度快<br>缺点: 不安全, 无法长期保存, 关机后就消失了</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>IndexWriterConfig: 索引写入器的配置类</p>
+</li>
+<li><p>Document: 文档</p>
+<p>在Lucene中, 每一条数据以文档的形式进行存储, 文档中也有其对应的属性和值, Lucene中一个文档类似数据库的一个表, 表中的字段类似于文档中的字段,只不过这个文档只能保存一条数据<br>Document看做是一个文件, 文件的属性就是文档的属性, 文件对应属性的值就是文档的属性的值 content,一个文档中可以有多个字段, 每一个字段就是一个field对象,不同的文档可以有不同的属性，字段也有其对应数据类型, 故Field类也提供了各种数据类型的实现类</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/liu347881922/images/master/lucene4.png" alt="lucene4"></p>
+<h3 id="solr"><a href="#solr" class="headerlink" title="solr"></a>solr</h3><h4 id="什么是solr？"><a href="#什么是solr？" class="headerlink" title="什么是solr？"></a>什么是solr？</h4><p>​    Solr 是 Apache 下的一个顶级开源项目，采用 Java 开发，它是基于 Lucene 的全文搜索 </p>
+<p>服务器。Solr 提供了比 Lucene 更为丰富的查询语言，同时实现了可配置、可扩展，并对索 </p>
+<p>引、搜索性能进行了优化。 </p>
+<p>Solr 可以独立运行，运行在 Jetty、Tomcat 等这些 Servlet 容器中，Solr 索引的实现方法 </p>
+<p>很简单，用 POST 方法向 Solr 服务器发送一个描述 Field 及其内容的 XML 文档，Solr 根 </p>
+<p>据 xml 文档添加、删除、更新索引 。Solr 搜索只需要发送 HTTP GET 请求，然后对 Solr 返 </p>
+<p>回 Xml、json 等格式的查询结果进行解析，组织页面布局。Solr 不提供构建 UI 的功能，Solr </p>
+<p>提供了一个管理界面，通过管理界面可以查询 Solr 的配置和运行情况。</p>
+<h4 id="Solr-与-Lucene-的区别"><a href="#Solr-与-Lucene-的区别" class="headerlink" title="Solr 与 Lucene 的区别"></a><strong>Solr</strong> <strong>与</strong> <strong>Lucene</strong> <strong>的区别</strong></h4><p>​    Lucene 是一个开放源代码的全文检索引擎工具包，它不是一个完整的全文检索引擎， </p>
+<p>Lucene 提供了完整的查询引擎和索引引擎，目的是为软件开发人员提供一个简单易用的工 </p>
+<p>具包，以方便的在目标系统中实现全文检索的功能，或者以 Lucene 为基础构建全文检索引</p>
+<p>擎。</p>
+<p>​    Solr 的目标是打造一款企业级的搜索引擎系统，它是一个搜索引擎服务，可以独立运 </p>
+<p>行，通过 Solr 可以非常快速的构建企业的搜索引擎，通过 Solr 也可以高效的完成站内搜索 </p>
+<p>功 能 。 </p>
+<p><img src="https://raw.githubusercontent.com/liu347881922/images/master/solr1.png" alt="solr1"></p>
+<h4 id="solr整合tomcat"><a href="#solr整合tomcat" class="headerlink" title="solr整合tomcat"></a>solr整合tomcat</h4><p><a href="https://blog.csdn.net/yunheli6451/article/details/82817064" target="_blank" rel="noopener">https://blog.csdn.net/yunheli6451/article/details/82817064</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/06/Spring Boot/" class="archive-article-date">
-  	<time datetime="2019-09-06T13:18:49.562Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/lucene & solr/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/06/shiro/" class="archive-article-date">
-  	<time datetime="2019-09-06T13:18:49.552Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/06/lucene & solr/" class="archive-article-date">
-  	<time datetime="2019-09-06T13:18:49.542Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2019/10/11/Spring Boot/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring Boot笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/11/angularjs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">angularjs笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -251,8 +396,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
